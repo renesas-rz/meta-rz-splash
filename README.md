@@ -24,7 +24,8 @@ Run 'bitbake-layers add-layer meta-rz-splash'
 II. Building the image.
 =================================================
 
-In build/conf/local.conf, add the following if you want to test panfrost:
+In build/conf/local.conf, add the following lines to enable to boot splash screen:
+
         DISTRO_FEATURES:append = " splash"
         IMAGE_INSTALL:append = " psplash"
 
