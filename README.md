@@ -1,7 +1,7 @@
 This README file contains information on the contents of the meta-rz-splash layer.
 
 The meta-rz-splash layer replaces the default Yocto logo in the boot splash screen with a Renesas logo.
-This has been currently tested on the RZ/G2L SoC with the VLP 3.0.7 (dunfell). For other VLP version, please check the tags and corresponding README for instructions.
+This has been currently tested on the RZ/G2L SoC with the VLP 4.0.1 (scarthgap). For other VLP version, please check the tags and corresponding README for instructions.
 
 Please see the corresponding sections below for details.
 
@@ -23,6 +23,10 @@ Run 'bitbake-layers add-layer meta-rz-splash'
 
 II. Building the image.
 =================================================
+
+In build/conf/local.conf, add the following if you want to test panfrost:
+        DISTRO_FEATURES:append = " splash"
+        IMAGE_INSTALL:append = " psplash"
 
 Next, build your customized image:
 	$bitbake core-image-weston
